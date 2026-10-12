@@ -27,7 +27,9 @@ All notable changes are documented here. The format follows
   rseng-agent-skills, the RSQKit AI guide and the GenAI RSE paper; the initialisation
   script removes it from new projects.
 - README badges for Lint, CodeQL, Release, PyPI and supported Python versions (PyPI
-  badges show "not found" until the first publish).
+  badges show "not found" until the first publish). The PyPI badges use the template's
+  repository name rather than `project-name`, which belongs to an unrelated PyPI
+  project; the initialisation script replaces it with your package name.
 - README repostatus.org badge (WIP) and an alpha maturity note; the `/release` prompt and
   the template guide remind you to keep them consistent with the `Development Status`
   classifier.

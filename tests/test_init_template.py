@@ -113,6 +113,21 @@ def test_init_template_removes_template_banners_from_readme(tmp_path: Path) -> N
     assert "Does something useful." in readme
 
 
+def test_init_template_points_pypi_badges_at_the_new_project(tmp_path: Path) -> None:
+    # "project-name" is someone else's PyPI project, so the template's badges must
+    # use another name; the script swaps it for the new project's name.
+    template_readme = (ROOT / "README.md").read_text(encoding="utf-8")
+    assert "img.shields.io/pypi/v/project-name" not in template_readme
+    assert "pypi.org/project/project-name" not in template_readme
+
+    readme = (_initialised_copy(tmp_path) / "README.md").read_text(encoding="utf-8")
+
+    assert "https://img.shields.io/pypi/v/my-tool.svg" in readme
+    assert "https://img.shields.io/pypi/pyversions/my-tool.svg" in readme
+    assert "https://pypi.org/project/my-tool/" in readme
+    assert "ai-assisted-rse-template" not in readme
+
+
 def test_init_template_rewrites_template_repository_urls(tmp_path: Path) -> None:
     with (ROOT / "pyproject.toml").open("rb") as fh:
         template_url = tomllib.load(fh)["project"]["urls"]["Repository"]

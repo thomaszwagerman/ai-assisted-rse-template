@@ -106,6 +106,8 @@ def build_replacements(args: argparse.Namespace) -> list[tuple[str, str]]:
         ("you@example.org", args.email),
         (f"{owner}.github.io/{name}", f"{args.org}.github.io/{args.name}"),
         (f"{owner}/{name}", f"{args.org}/{args.name}"),
+        # Bare template name, e.g. in the README's PyPI badges.
+        (name, args.name),
         ("your-github-handle", args.handle or args.org),
         ("your-org", args.org),
         (OLD_MODULE, module),
