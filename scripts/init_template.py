@@ -31,8 +31,11 @@ SKIP_DIRS = {
     "__pycache__",
     ".mypy_cache",
     ".ruff_cache",
+    ".pytest_cache",
+    ".cache",
+    "htmlcov",
 }
-SKIP_FILES = {"uv.lock", "init_template.py"}
+SKIP_FILES = {"uv.lock", "init_template.py", "coverage.xml", ".coverage"}
 OLD_MODULE = "project_name"
 
 NAV_OLD = (
@@ -46,6 +49,10 @@ README_BANNER = re.compile(r"> \*\*Using this as a template\?\*\*.*?\n\n", re.DO
 INDEX_BULLET = re.compile(
     r"- Setting up a new project from this template\?.*?\n(?=\n|\Z)", re.DOTALL
 )
+CHANGELOG_UNRELEASED = re.compile(
+    r"(## \[Unreleased\]\n\n).*?(\n\[Unreleased\]:)", re.DOTALL
+)
+CHANGELOG_FRESH = r"\1### Added\n\n- Initial project structure.\n\2"
 
 
 def text_files() -> list[Path]:
@@ -119,6 +126,8 @@ def main() -> int:
             text = README_BANNER.sub("", text)
         elif rel == "docs/index.md":
             text = INDEX_BULLET.sub("", text)
+        elif rel == "CHANGELOG.md":
+            text = CHANGELOG_UNRELEASED.sub(CHANGELOG_FRESH, text)
         for old, new in replacements:
             text = text.replace(old, new)
         if text != original:
@@ -130,13 +139,18 @@ def main() -> int:
     new_dir = ROOT / "src" / args.name.replace("-", "_")
     print(f"rename src/{OLD_MODULE} -> src/{new_dir.name}")
     guide = ROOT / "docs" / "using-this-template.md"
-    print("delete docs/using-this-template.md and scripts/init_template.py")
+    smoke_test = ROOT / "tests" / "test_init_template.py"
+    print(
+        "delete docs/using-this-template.md, tests/test_init_template.py "
+        "and scripts/init_template.py"
+    )
     if args.dry_run:
         print(f"\nDry run: {changed} file(s) would change.")
         return 0
 
     old_dir.rename(new_dir)
     guide.unlink(missing_ok=True)
+    smoke_test.unlink(missing_ok=True)
     if not args.no_lock:
         if shutil.which("uv") is None:
             print("uv not found; install it, then run `uv lock && make install`.")
