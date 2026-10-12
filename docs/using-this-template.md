@@ -41,7 +41,7 @@ Then, by hand:
 - Edit `AGENTS.md` so the layout and conventions describe your real project.
 - Add checks for your field (units, data formats, numerical methods) to the "Project-specific
   checks" section of `.github/instructions/review.instructions.md`.
-- Optionally install the community skills; see [community-skills.md](community-skills.md).
+- Optionally install the community skills; see [ai-workflow.md](ai-workflow.md#community-skills-optional).
 
 Then verify everything:
 

@@ -8,9 +8,8 @@ Prepare release ${input:version:New version, e.g. 0.2.0 (leave empty to propose 
 Never stage, commit, tag, push, pull or publish yourself (see the Git section of
 `AGENTS.md`). Prepare the changes, then give the user the commands.
 
-If the optional community skills are installed (see `docs/community-skills.md`), also use
-`rseng-publishing-releasing`, `rseng-archiving` and `rseng-citation-metadata`. Where they
-disagree with this prompt or `AGENTS.md`, this prompt and `AGENTS.md` win.
+If the optional community skills are installed (see `AGENTS.md`), also use
+`rseng-publishing-releasing`, `rseng-archiving` and `rseng-citation-metadata`.
 
 1. Confirm the working tree is clean and on `main`, and `make check` passes.
 2. Choose the version using [SemVer](https://semver.org/). Confirm it with the user.

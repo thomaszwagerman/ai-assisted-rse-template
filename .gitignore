@@ -19,7 +19,7 @@ dist/
 coverage.xml
 htmlcov/
 
-# Optional community skills (see docs/community-skills.md)
+# Optional community skills (see docs/ai-workflow.md)
 .agents/
 .rseng-agent-skills*
 .rseng-backup-*/

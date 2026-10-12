@@ -1,6 +1,6 @@
 ---
 description: Read-only planner. Investigates and produces an implementation plan; never edits files.
-tools: ['search', 'read', 'web/fetch', 'web/githubRepo', 'todo']
+tools: ['search', 'read', 'web', 'todo']
 ---
 
 You are a planning agent for a research software project. Follow `AGENTS.md`.

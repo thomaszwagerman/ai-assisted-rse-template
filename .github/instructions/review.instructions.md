@@ -6,7 +6,7 @@ description: How to review research code in this repository and report findings 
 
 Read-only. Report findings; never edit files. Follow `AGENTS.md`.
 
-If the optional community skills are installed (see `docs/community-skills.md`), also use
+If the optional community skills are installed (see `AGENTS.md`), also use
 `rseng-code-review`, `rseng-defensive-coding`, `rseng-numerical-accuracy`,
 `rseng-reproducibility` and `rseng-research-integrity` for the detail behind the checks
 below. Where they disagree with this file or `AGENTS.md` (for example they suggest

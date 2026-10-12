@@ -35,17 +35,10 @@ mean([1.0, 2.0, 3.0])  # 2.0
 
 ## Development
 
-Requires [uv](https://docs.astral.sh/uv/) and `make`.
-
-```bash
-make install   # create the environment and install git hooks
-make check     # lint, type-check, test, licence compliance
-make docs      # build the documentation
-make help      # list all targets
-```
-
-See [CONTRIBUTING.md](CONTRIBUTING.md) for the full workflow. For optional AI-assistant
-skills, see [docs/community-skills.md](docs/community-skills.md).
+Requires [uv](https://docs.astral.sh/uv/) and `make`. Run `make install` once, then
+`make check` before every pull request; `make help` lists all targets. See
+[CONTRIBUTING.md](CONTRIBUTING.md) for the full workflow. For optional AI-assistant
+skills, see [docs/ai-workflow.md](docs/ai-workflow.md#community-skills-optional).
 
 ## Citation
 

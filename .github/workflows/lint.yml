@@ -27,9 +27,4 @@ jobs:
         with:
           enable-cache: true
       - run: uv sync --locked
-      - run: uv lock --check
-      - run: uv run ruff check .
-      - run: uv run ruff format --check .
-      - run: uv run mypy
-      - run: uv run validate-pyproject pyproject.toml
-      - run: uv run cffconvert --validate
+      - run: make lint typecheck metadata

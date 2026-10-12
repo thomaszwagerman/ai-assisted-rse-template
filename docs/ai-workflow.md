@@ -20,7 +20,15 @@ responsible for correctness, licensing and the scientific claims.
 | `.github/prompts/*.prompt.md` | Reusable workflows. Type `/` in Copilot Chat to run them: `/audit`, `/fair-review`, `/release`, `/write-tests`, `/explain-code`. |
 | `.github/agents/*.agent.md` | Personas with restricted tools: `planner` (read-only), `implementer`, `reviewer` (reports, does not edit), `docs-writer`. |
 | `.github/instructions/review.instructions.md` | How `/audit` and the `reviewer` agent review code and report findings. Add checks for your field in its "Project-specific checks" section. |
-| [Community skills](community-skills.md) | Optional. The template ships no skills of its own; it points to the community [rseng-agent-skills](https://github.com/fdiblen/rseng-agent-skills) pack for practice guidance. |
+
+## Community skills (optional)
+
+This template does not ship its own agent skills. We recommend the community
+[rseng-agent-skills](https://github.com/fdiblen/rseng-agent-skills) collection: 67 skills
+for research software practice (testing, FAIR metadata, citation, releasing,
+reproducibility, review). Follow its README for installation, updates and removal.
+The prompts and agents in `.github/` work without it, and use the skills when they are
+installed. Where a skill disagrees with `AGENTS.md`, `AGENTS.md` wins.
 
 ## A loop that works
 

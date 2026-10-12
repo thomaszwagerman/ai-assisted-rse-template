@@ -90,9 +90,7 @@ addopts = [
     "--strict-markers",
     "--cov=project_name",
     "--cov-report=term-missing",
-    "--cov-report=xml",
 ]
 
 [tool.coverage.run]
 branch = true
-source = ["project_name"]

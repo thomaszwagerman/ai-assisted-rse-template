@@ -44,7 +44,6 @@ Run `make help` to see every target.
 - **Changelog**: user-visible changes go under "Unreleased" in
   [CHANGELOG.md](CHANGELOG.md).
 
-
 ## Using AI assistants
 
 AI tools are welcome. You remain the author and are responsible for every line you

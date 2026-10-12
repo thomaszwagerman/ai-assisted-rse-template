@@ -19,7 +19,6 @@ nav = [
     "using-this-template.md",
     "ai-workflow.md",
   ] },
-  { "Community skills" = "community-skills.md" },
 ]
 
 [project.plugins.mkdocstrings.handlers.python]

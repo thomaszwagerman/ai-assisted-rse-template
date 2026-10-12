@@ -9,7 +9,7 @@ Sustainability Institute practice. This prompt changes nothing: report findings,
 edit files. Follow `AGENTS.md`. Do not invent facts; mark anything you cannot verify from
 the files as **Unsure**.
 
-If the optional community skills are installed (see `docs/community-skills.md`), also use
+If the optional community skills are installed (see `AGENTS.md`), also use
 `rseng-fair-software` and `rseng-citation-metadata` for the detail. If not, carry on
 without them.
 

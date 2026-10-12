@@ -23,8 +23,6 @@ print(mean([1.0, 2.0, 3.0]))  # 2.0
 
 ## Develop
 
-```bash
-make install   # environment from uv.lock, plus git hooks
-make check     # lint, type-check, test, licence compliance
-make docs-serve
-```
+See the
+[contributing guide](https://github.com/your-org/project-name/blob/main/CONTRIBUTING.md)
+for the development setup. Use `make docs-serve` to preview these pages.
