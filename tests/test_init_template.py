@@ -10,6 +10,7 @@ This file is template-only: ``scripts/init_template.py`` deletes it when it runs
 import shutil
 import subprocess
 import sys
+import tomllib
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -61,7 +62,7 @@ def test_init_template_rejects_invalid_name() -> None:
     assert "--name must be lowercase" in result.stderr
 
 
-def test_init_template_resets_changelog(tmp_path: Path) -> None:
+def _initialised_copy(tmp_path: Path) -> Path:
     # Runs the real script on a copy so the working tree is never modified.
     copy = tmp_path / "repo"
     shutil.copytree(
@@ -84,6 +85,11 @@ def test_init_template_resets_changelog(tmp_path: Path) -> None:
     result = _run(*VALID_ARGS, "--no-lock", root=copy)
 
     assert result.returncode == 0, result.stderr
+    return copy
+
+
+def test_init_template_resets_changelog(tmp_path: Path) -> None:
+    copy = _initialised_copy(tmp_path)
     changelog = (copy / "CHANGELOG.md").read_text(encoding="utf-8")
     unreleased = changelog.split("## [Unreleased]")[1]
     assert "- Initial project structure." in unreleased
@@ -91,3 +97,19 @@ def test_init_template_resets_changelog(tmp_path: Path) -> None:
     assert "### Removed" not in unreleased
     assert "init_template" not in changelog
     assert "[Unreleased]: https://github.com/my-org/my-tool/compare/" in changelog
+
+
+def test_init_template_rewrites_template_repository_urls(tmp_path: Path) -> None:
+    with (ROOT / "pyproject.toml").open("rb") as fh:
+        template_url = tomllib.load(fh)["project"]["urls"]["Repository"]
+    owner, name = template_url.removeprefix("https://github.com/").split("/")
+    copy = _initialised_copy(tmp_path)
+
+    for path in copy.rglob("*"):
+        if path.is_file() and path.name != "uv.lock":
+            text = path.read_text(encoding="utf-8", errors="ignore")
+            assert f"{owner}/{name}" not in text, path
+            assert f"{owner}.github.io" not in text, path
+    pyproject = (copy / "pyproject.toml").read_text(encoding="utf-8")
+    assert 'Repository = "https://github.com/my-org/my-tool"' in pyproject
+    assert 'Documentation = "https://my-org.github.io/my-tool/"' in pyproject

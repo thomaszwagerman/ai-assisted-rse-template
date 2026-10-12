@@ -20,6 +20,7 @@ import re
 import shutil
 import subprocess
 import sys
+import tomllib
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -37,6 +38,7 @@ SKIP_DIRS = {
 }
 SKIP_FILES = {"uv.lock", "init_template.py", "coverage.xml", ".coverage"}
 OLD_MODULE = "project_name"
+GITHUB_URL = re.compile(r"github\.com/(?P<owner>[^/\"]+)/(?P<name>[^/\"]+)")
 
 NAV_OLD = (
     '  { "Using this template" = [\n'
@@ -71,12 +73,26 @@ def text_files() -> list[Path]:
     return files
 
 
+def template_repository() -> tuple[str, str]:
+    """Return the (owner, name) of the template's own repository.
+
+    Read from ``[project.urls] Repository`` so the script holds no hard-coded names.
+    """
+    with (ROOT / "pyproject.toml").open("rb") as fh:
+        url = tomllib.load(fh)["project"]["urls"]["Repository"]
+    match = GITHUB_URL.search(url)
+    if match is None:
+        raise SystemExit(f"Cannot parse a GitHub repository from {url!r}")
+    return match["owner"], match["name"]
+
+
 def build_replacements(args: argparse.Namespace) -> list[tuple[str, str]]:
     """Return ordered (old, new) replacements; specific ones come first."""
     parts = args.author.split()
     family = parts[-1] if len(parts) > 1 else args.author
     given = " ".join(parts[:-1]) if len(parts) > 1 else args.author
     module = args.name.replace("-", "_")
+    owner, name = template_repository()
     return [
         ('family-names: "Name"', f'family-names: "{family}"'),
         ('given-names: "Your"', f'given-names: "{given}"'),
@@ -85,6 +101,8 @@ def build_replacements(args: argparse.Namespace) -> list[tuple[str, str]]:
         ("One-line description of the project.", args.description),
         ("Your Name", args.author),
         ("you@example.org", args.email),
+        (f"{owner}.github.io/{name}", f"{args.org}.github.io/{args.name}"),
+        (f"{owner}/{name}", f"{args.org}/{args.name}"),
         ("your-github-handle", args.handle or args.org),
         ("your-org", args.org),
         (OLD_MODULE, module),

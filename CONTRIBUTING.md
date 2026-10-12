@@ -15,7 +15,7 @@ Thank you for considering a contribution. This project follows the
 Requires [uv](https://docs.astral.sh/uv/) and `make`.
 
 ```bash
-git clone https://github.com/your-org/project-name
+git clone https://github.com/thomaszwagerman/ai-assisted-rse-template
 cd project-name
 make install   # environment from uv.lock + pre-commit hooks
 make check     # must pass before you open a pull request

@@ -5,8 +5,8 @@
   "description": "One-line description of the project.",
   "version": "0.1.0",
   "license": "https://spdx.org/licenses/MIT",
-  "codeRepository": "https://github.com/your-org/project-name",
-  "issueTracker": "https://github.com/your-org/project-name/issues",
+  "codeRepository": "https://github.com/thomaszwagerman/ai-assisted-rse-template",
+  "issueTracker": "https://github.com/thomaszwagerman/ai-assisted-rse-template/issues",
   "programmingLanguage": "Python",
   "runtimePlatform": "Python >=3.11",
   "author": [

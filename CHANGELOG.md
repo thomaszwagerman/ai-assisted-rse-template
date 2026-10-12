@@ -40,4 +40,4 @@ All notable changes are documented here. The format follows
 - `/new-feature` (superseded by the `implementer` agent) and `/prepare-release`
   (use `/release`) prompts.
 
-[Unreleased]: https://github.com/your-org/project-name/compare/HEAD...HEAD
+[Unreleased]: https://github.com/thomaszwagerman/ai-assisted-rse-template/compare/HEAD...HEAD

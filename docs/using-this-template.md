@@ -25,7 +25,7 @@ uv run python scripts/init_template.py --dry-run \
 
 Review the output, then run it again without `--dry-run`. The script replaces
 `project-name`, `project_name`, `Your Name`, `you@example.org`, `your-org` and the
-description everywhere, renames `src/project_name/`, resets the "Unreleased" section of
+description everywhere (including the template's own repository and docs URLs), renames `src/project_name/`, resets the "Unreleased" section of
 `CHANGELOG.md`, refreshes `uv.lock`, and removes this page, the script's own smoke test
 (`tests/test_init_template.py`) and itself.
 

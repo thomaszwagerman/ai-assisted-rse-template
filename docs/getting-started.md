@@ -24,5 +24,5 @@ print(mean([1.0, 2.0, 3.0]))  # 2.0
 ## Develop
 
 See the
-[contributing guide](https://github.com/your-org/project-name/blob/main/CONTRIBUTING.md)
+[contributing guide](https://github.com/thomaszwagerman/ai-assisted-rse-template/blob/main/CONTRIBUTING.md)
 for the development setup. Use `make docs-serve` to preview these pages.

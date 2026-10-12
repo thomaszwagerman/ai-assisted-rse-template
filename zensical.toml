@@ -6,7 +6,7 @@
 site_name = "project-name"
 site_description = "One-line description of the project."
 site_author = "Your Name"
-site_url = "https://your-org.github.io/project-name/"
+site_url = "https://thomaszwagerman.github.io/ai-assisted-rse-template/"
 copyright = "&copy; 2026 Your Name"
 docs_dir = "docs"
 site_dir = "site"

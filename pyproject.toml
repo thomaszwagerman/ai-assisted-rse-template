@@ -25,11 +25,11 @@ classifiers = [
 dependencies = []
 
 [project.urls]
-Homepage = "https://github.com/your-org/project-name"
-Documentation = "https://your-org.github.io/project-name/"
-Repository = "https://github.com/your-org/project-name"
-Issues = "https://github.com/your-org/project-name/issues"
-Changelog = "https://github.com/your-org/project-name/blob/main/CHANGELOG.md"
+Homepage = "https://github.com/thomaszwagerman/ai-assisted-rse-template"
+Documentation = "https://thomaszwagerman.github.io/ai-assisted-rse-template/"
+Repository = "https://github.com/thomaszwagerman/ai-assisted-rse-template"
+Issues = "https://github.com/thomaszwagerman/ai-assisted-rse-template/issues"
+Changelog = "https://github.com/thomaszwagerman/ai-assisted-rse-template/blob/main/CHANGELOG.md"
 
 [build-system]
 requires = ["uv_build>=0.11.4,<0.12.0"]

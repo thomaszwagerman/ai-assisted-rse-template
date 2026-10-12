@@ -7,8 +7,8 @@ authors:
     given-names: "Your"
     # orcid: "https://orcid.org/0000-0000-0000-0000"
     # affiliation: "Your Institute"
-repository-code: "https://github.com/your-org/project-name"
-url: "https://your-org.github.io/project-name/"
+repository-code: "https://github.com/thomaszwagerman/ai-assisted-rse-template"
+url: "https://thomaszwagerman.github.io/ai-assisted-rse-template/"
 abstract: "One-line description of the project."
 keywords:
   - research software

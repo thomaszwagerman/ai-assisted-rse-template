@@ -6,10 +6,10 @@ SPDX-License-Identifier: MIT
 
 # project-name
 
-[![Tests](https://github.com/your-org/project-name/actions/workflows/tests.yml/badge.svg)](https://github.com/your-org/project-name/actions/workflows/tests.yml)
-[![Docs](https://github.com/your-org/project-name/actions/workflows/docs.yml/badge.svg)](https://your-org.github.io/project-name/)
-[![REUSE status](https://api.reuse.software/badge/github.com/your-org/project-name)](https://api.reuse.software/info/github.com/your-org/project-name)
-[![OpenSSF Scorecard](https://api.scorecard.dev/projects/github.com/your-org/project-name/badge)](https://scorecard.dev/viewer/?uri=github.com/your-org/project-name)
+[![Tests](https://github.com/thomaszwagerman/ai-assisted-rse-template/actions/workflows/tests.yml/badge.svg)](https://github.com/thomaszwagerman/ai-assisted-rse-template/actions/workflows/tests.yml)
+[![Docs](https://github.com/thomaszwagerman/ai-assisted-rse-template/actions/workflows/docs.yml/badge.svg)](https://thomaszwagerman.github.io/ai-assisted-rse-template/)
+[![REUSE status](https://api.reuse.software/badge/github.com/thomaszwagerman/ai-assisted-rse-template)](https://api.reuse.software/info/github.com/thomaszwagerman/ai-assisted-rse-template)
+[![OpenSSF Scorecard](https://api.scorecard.dev/projects/github.com/thomaszwagerman/ai-assisted-rse-template/badge)](https://scorecard.dev/viewer/?uri=github.com/thomaszwagerman/ai-assisted-rse-template)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSES/MIT.txt)
 
 One-line description of the project.
