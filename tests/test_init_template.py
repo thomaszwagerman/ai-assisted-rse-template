@@ -99,6 +99,20 @@ def test_init_template_resets_changelog(tmp_path: Path) -> None:
     assert "[Unreleased]: https://github.com/my-org/my-tool/compare/" in changelog
 
 
+def test_init_template_removes_template_banners_from_readme(tmp_path: Path) -> None:
+    template_readme = (ROOT / "README.md").read_text(encoding="utf-8")
+    assert "template-about:start" in template_readme
+    copy = _initialised_copy(tmp_path)
+
+    readme = (copy / "README.md").read_text(encoding="utf-8")
+
+    assert "opinionated" not in readme
+    assert "template-about" not in readme
+    assert "Using this as a template" not in readme
+    assert "## Installation" in readme
+    assert "Does something useful." in readme
+
+
 def test_init_template_rewrites_template_repository_urls(tmp_path: Path) -> None:
     with (ROOT / "pyproject.toml").open("rb") as fh:
         template_url = tomllib.load(fh)["project"]["urls"]["Repository"]

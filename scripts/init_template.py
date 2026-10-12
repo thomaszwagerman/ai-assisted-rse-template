@@ -48,6 +48,9 @@ NAV_OLD = (
 )
 NAV_NEW = '  { "AI-assisted workflow" = "ai-workflow.md" },\n'
 README_BANNER = re.compile(r"> \*\*Using this as a template\?\*\*.*?\n\n", re.DOTALL)
+README_ABOUT = re.compile(
+    r"<!-- template-about:start -->\n.*?<!-- template-about:end -->\n\n", re.DOTALL
+)
 INDEX_BULLET = re.compile(
     r"- Setting up a new project from this template\?.*?\n(?=\n|\Z)", re.DOTALL
 )
@@ -141,7 +144,7 @@ def main() -> int:
         if rel == "zensical.toml":
             text = text.replace(NAV_OLD, NAV_NEW)
         elif rel == "README.md":
-            text = README_BANNER.sub("", text)
+            text = README_ABOUT.sub("", README_BANNER.sub("", text))
         elif rel == "docs/index.md":
             text = INDEX_BULLET.sub("", text)
         elif rel == "CHANGELOG.md":

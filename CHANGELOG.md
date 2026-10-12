@@ -23,6 +23,9 @@ All notable changes are documented here. The format follows
   (`docs/community-skills.md`).
 - Python 3.14 support (classifier and CI matrix).
 - Smoke test for `scripts/init_template.py`.
+- README section describing the template as opinionated and AI-assisted, with links to
+  rseng-agent-skills, the RSQKit AI guide and the GenAI RSE paper; the initialisation
+  script removes it from new projects.
 
 ### Changed
 
