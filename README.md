@@ -15,38 +15,23 @@ SPDX-License-Identifier: MIT
 One-line description of the project.
 
 <!-- template-about:start -->
-> **About this template.** This is an *opinionated* repository template for research
+> This is an *opinionated* repository template for research
 > software engineers (RSEs) who want their work to be assisted by AI tools and agents.
-> It pairs sound research-software practice with agent instructions, prompts and
-> guard-rails that keep you in control of the science.
+> It attempts to pair RSE good practice with agent instructions, prompts and
+> guard-rails.
+>
+> Recommended complimentary resources:
 >
 > - **Skills:** community agent skills for research software live in
 >   [rseng-agent-skills](https://github.com/fdiblen/rseng-agent-skills).
 > - **Guidance:** for AI guidance and good practice, see the
 >   [RSQKit AI guide](https://everse.software/RSQKit/ai).
-> - **Background:** Druskat, S., Barker, M., Cosden, I., Geng, C., Haines, R., Katz, D. S.,
+> - **RSE in the age of GenAI:** Druskat, S., Barker, M., Cosden, I., Geng, C., Haines, R., Katz, D. S.,
 >   Shingleton, J. & van Werkhoven, B. (2026). *Research Software Engineers in the Age of
 >   GenAI: Same Value, Changing Practice*. Zenodo.
 >   [https://doi.org/10.5281/zenodo.20320179](https://doi.org/10.5281/zenodo.20320179)
 >   ([blog post](https://www.researchsoft.org/blog/2026-05-28/)).
 >
-> ### What is opinionated
->
-> - **Agents assist, you decide:** [AGENTS.md](AGENTS.md) is the single source of truth.
->   Agents never stage, commit or push, and must ask before adding dependencies or
->   touching workflow permissions. Prompts and personas (planner, implementer, reviewer,
->   docs-writer) live in `.github/`.
-> - **Scientific integrity rules:** no invented references or data, reproducible
->   randomness, and no weakening tests or tolerances to make a run pass.
-> - **Tooling:** Python >= 3.11 with a `src/` layout, [uv](https://docs.astral.sh/uv/)
->   and `make` targets, pytest with branch coverage, Ruff, and mypy in strict mode.
-> - **Documentation:** [Zensical](https://zensical.org) with NumPy-style docstrings.
-> - **Metadata and licensing:** [REUSE](https://reuse.software)-compliant SPDX headers,
->   `CITATION.cff` and `codemeta.json`, and Zenodo archiving on release.
-> - **Workflow:** Conventional Commits, CI checks, CodeQL and OpenSSF Scorecard, and
->   PyPI releases through trusted publishing.
->
-> How the assistants are set up: [docs/ai-workflow.md](docs/ai-workflow.md).
 <!-- template-about:end -->
 
 > **Using this as a template?** Start with
