@@ -15,5 +15,7 @@ All notable changes are documented here. The format follows
 ### Added
 
 - Initial project structure.
+- `/audit` prompt and `scientific-code-review` skill; reviewer agent now requires evidence
+  for each finding.
 
 [Unreleased]: https://github.com/your-org/project-name/compare/HEAD...HEAD

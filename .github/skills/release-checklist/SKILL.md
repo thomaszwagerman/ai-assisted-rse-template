@@ -5,8 +5,8 @@ description: Prepare a new release of this research software, including version 
 
 # Release checklist
 
-Never commit, tag, push or publish yourself. Prepare changes, then give the user the
-commands.
+Never stage, commit, tag, push, pull or publish yourself (see the Git section of
+`AGENTS.md`). Prepare changes, then give the user the commands.
 
 1. Confirm the working tree is clean and on `main`, and `make check` passes.
 2. Choose the version using [SemVer](https://semver.org/). Confirm it with the user.

@@ -39,6 +39,8 @@ Then, by hand:
 - Update `GOVERNANCE.md` and the contact addresses in `SECURITY.md` and
   `CODE_OF_CONDUCT.md`.
 - Edit `AGENTS.md` so the layout and conventions describe your real project.
+- Add checks for your field (units, data formats, numerical methods) to the "Project-specific
+  checks" section of `.github/skills/scientific-code-review/SKILL.md`.
 
 Then verify everything:
 

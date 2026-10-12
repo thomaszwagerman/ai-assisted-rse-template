@@ -30,7 +30,12 @@ responsible for correctness, licensing and the scientific claims.
 3. **Verify yourself.** Run `make check`, read the diff, and run the code. Do not accept
    "tests pass" without seeing the output.
 4. **Review** with the `reviewer` agent, which looks for what the author missed: unseeded
-   randomness, weakened tolerances, missing docs, new dependencies.
+   randomness, weakened tolerances, unclear units, missing docs, new dependencies.
+   Use `/audit` for a read-only look at a whole folder or the repository, and
+   `/review-for-fair` for metadata and sustainability. Both reviews follow
+   `.github/skills/scientific-code-review/SKILL.md`; add checks for your field in its
+   "Project-specific checks" section. An automated review does not replace tests,
+   numerical validation or a domain expert.
 5. **Commit** in small Conventional Commits. You wrote it, you own it.
 
 ## Habits that protect scientific integrity
