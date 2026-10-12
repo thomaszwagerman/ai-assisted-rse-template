@@ -17,5 +17,19 @@ All notable changes are documented here. The format follows
 - Initial project structure.
 - `/audit` prompt and `scientific-code-review` skill; reviewer agent now requires evidence
   for each finding.
+- `implementer` agent and `fair-review` skill with a read-only `/fair-review` prompt
+  (replaces `/review-for-fair`).
+- Python 3.14 support (classifier and CI matrix).
+- Smoke test for `scripts/init_template.py`.
+
+### Changed
+
+- Agents and prompts now point to `AGENTS.md` and the skills instead of restating them;
+  `update-docs` is folded into the `docs-writer` agent.
+
+### Removed
+
+- `/new-feature` (superseded by the `implementer` agent) and `/prepare-release`
+  (use the `release-checklist` skill) prompts.
 
 [Unreleased]: https://github.com/your-org/project-name/compare/HEAD...HEAD

@@ -18,21 +18,22 @@ responsible for correctness, licensing and the scientific claims.
 | `.github/copilot-instructions.md` | Short Copilot-specific pointer to `AGENTS.md`. |
 | `.github/instructions/*.instructions.md` | Rules that apply only to matching files (`applyTo`). |
 | `.github/prompts/*.prompt.md` | Reusable workflows. Type `/` in Copilot Chat to run them. |
-| `.github/agents/*.agent.md` | Personas with restricted tools: `planner` (read-only), `reviewer`, `docs-writer`. |
-| `.github/skills/*/SKILL.md` | Task playbooks an agent loads when relevant, for example `release-checklist`. |
+| `.github/agents/*.agent.md` | Personas with restricted tools: `planner` (read-only), `implementer`, `reviewer` (reports, does not edit), `docs-writer`. |
+| `.github/skills/*/SKILL.md` | Task playbooks an agent loads when relevant: `scientific-code-review`, `fair-review`, `release-checklist`. |
 
 ## A loop that works
 
 1. **Plan** with the `planner` agent. It cannot edit files, so you get a plan to critique
    before anything changes. Correct wrong assumptions here, where it is cheap.
-2. **Implement in small steps** with `/new-feature` or plain agent mode. Ask for tests
-   first. One small change per session beats one large one.
+2. **Implement in small steps** with the `implementer` agent. It writes tests first, runs
+   `make check` and stops to ask before touching dependencies or workflows. One small
+   change per session beats one large one.
 3. **Verify yourself.** Run `make check`, read the diff, and run the code. Do not accept
    "tests pass" without seeing the output.
 4. **Review** with the `reviewer` agent, which looks for what the author missed: unseeded
    randomness, weakened tolerances, unclear units, missing docs, new dependencies.
    Use `/audit` for a read-only look at a whole folder or the repository, and
-   `/review-for-fair` for metadata and sustainability. Both reviews follow
+   `/fair-review` for metadata and sustainability. `/audit` and the `reviewer` follow
    `.github/skills/scientific-code-review/SKILL.md`; add checks for your field in its
    "Project-specific checks" section. An automated review does not replace tests,
    numerical validation or a domain expert.

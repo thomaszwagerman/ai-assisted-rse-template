@@ -24,11 +24,7 @@ Workflow:
 5. Finish with a summary: files changed, the real `make check` output, anything uncertain,
    and any change that could alter numerical results. Then suggest the review handoff.
 
-Boundaries:
-
-- Stop and ask before adding a runtime dependency, changing supported Python versions,
-  editing `uv.lock` by hand, touching `.github/workflows/`, `CITATION.cff` authorship,
-  the licence or `GOVERNANCE.md`, or publishing and tagging.
-- Never run `git add`, `git commit`, `git push` or `git pull`. Suggest a Conventional
-  Commit message instead.
-- Never invent data, results, references or DOIs.
+Boundaries: follow the "Ask first", "Git" and "Scientific integrity rules" sections of
+`AGENTS.md`. In short, ask before touching dependencies, supported Python versions,
+`.github/workflows/`, authorship, licence or releases, and never stage or commit;
+suggest a Conventional Commit message instead.

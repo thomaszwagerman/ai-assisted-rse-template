@@ -25,8 +25,9 @@ uv run python scripts/init_template.py --dry-run \
 
 Review the output, then run it again without `--dry-run`. The script replaces
 `project-name`, `project_name`, `Your Name`, `you@example.org`, `your-org` and the
-description everywhere, renames `src/project_name/`, refreshes `uv.lock`, and removes this
-page and itself.
+description everywhere, renames `src/project_name/`, resets the "Unreleased" section of
+`CHANGELOG.md`, refreshes `uv.lock`, and removes this page, the script's own smoke test
+(`tests/test_init_template.py`) and itself.
 
 Then, by hand:
 
@@ -63,8 +64,8 @@ make docs
 
 ## 4. Releasing
 
-Use the `/prepare-release` prompt in Copilot Chat, or follow
-`.github/skills/release-checklist/SKILL.md`. Publishing a GitHub release triggers Zenodo,
+Follow `.github/skills/release-checklist/SKILL.md`, or ask Copilot Chat to follow the
+`release-checklist` skill. Publishing a GitHub release triggers Zenodo,
 which reads `CITATION.cff`. Add the DOI back into `CITATION.cff`, `codemeta.json` and the
 README afterwards.
 

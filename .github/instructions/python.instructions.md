@@ -1,6 +1,6 @@
 ---
 description: Python code conventions for the package
-applyTo: "src/**/*.py,scripts/**/*.py"
+applyTo: "src/**/*.py"
 ---
 
 - Full type annotations; code must pass `mypy --strict` (`make typecheck`).
