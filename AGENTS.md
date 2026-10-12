@@ -37,7 +37,7 @@ Run `make check` before declaring a task done, and report the actual output.
 
 - `src/project_name/`: library code. `tests/`: pytest tests mirroring the package.
 - `docs/` + `zensical.toml`: documentation. API reference is generated from docstrings.
-- `.github/`: workflows, issue/PR templates, Copilot instructions, prompts, agents, skills.
+- `.github/`: workflows, PR template, Copilot instructions, prompts, agents, skills.
 - `CITATION.cff`, `codemeta.json`, `REUSE.toml`: metadata. Keep them consistent.
 
 ## Conventions

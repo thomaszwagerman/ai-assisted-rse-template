@@ -16,8 +16,8 @@ Check and report, with file references:
 - **Interoperable**: standard formats, documented inputs/outputs, pinned and locked
   dependencies (`uv.lock`), supported Python versions stated and tested in CI.
 - **Reusable**: clear licence, REUSE compliance, tests, docs, contribution guide,
-  code of conduct, security policy, changelog, governance and maintainers named.
-- **Sustainability**: CI, dependency updates, bus factor, issue/PR templates.
+  code of conduct, changelog, governance and maintainers named.
+- **Sustainability**: CI, dependency updates, bus factor, PR template.
 
 Output a table of findings (Pass / Gap / Unsure) with a prioritised list of fixes.
 Do not invent facts; mark anything you cannot verify from the files as Unsure.

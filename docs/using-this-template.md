@@ -36,8 +36,7 @@ Then, by hand:
 - Check the licence choice (MIT by default). To change it: replace `LICENSES/MIT.txt` and
   `LICENSE` (`uv run reuse download <SPDX-ID>`), update `license` in `pyproject.toml`,
   `CITATION.cff`, `codemeta.json`, `REUSE.toml` and the SPDX headers.
-- Update `GOVERNANCE.md` and the contact addresses in `SECURITY.md` and
-  `CODE_OF_CONDUCT.md`.
+- Update `GOVERNANCE.md` and the contact address in `CODE_OF_CONDUCT.md`.
 - Edit `AGENTS.md` so the layout and conventions describe your real project.
 - Add checks for your field (units, data formats, numerical methods) to the "Project-specific
   checks" section of `.github/skills/scientific-code-review/SKILL.md`.
@@ -57,7 +56,6 @@ make docs
 | Pages source = **GitHub Actions** | Settings, Pages | `docs.yml` deploys the site |
 | Branch protection on `main` | Settings, Rules | Require pull request and the `Tests`, `Lint`, `REUSE compliance` and `CodeQL` checks |
 | Dependabot alerts and security updates | Settings, Advanced Security | Alerts for vulnerable dependencies |
-| Private vulnerability reporting | Settings, Advanced Security | Matches `SECURITY.md` |
 | Secret scanning and push protection | Settings, Advanced Security | Stops leaked credentials |
 | Environment `pypi` | Settings, Environments | Add yourself as a required reviewer for releases |
 | PyPI trusted publisher | pypi.org, project, Publishing | Workflow `release.yml`, environment `pypi`; no token needed |
