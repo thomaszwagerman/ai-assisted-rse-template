@@ -38,6 +38,8 @@ Then, by hand:
   `LICENSE` (`uv run reuse download <SPDX-ID>`), update `license` in `pyproject.toml`,
   `CITATION.cff`, `codemeta.json`, `REUSE.toml` and the SPDX headers.
 - Update `GOVERNANCE.md` and the contact address in `CODE_OF_CONDUCT.md`.
+- Keep the [repostatus.org](https://www.repostatus.org) badge in `README.md` (WIP by
+  default) and the `Development Status` classifier in `pyproject.toml` in agreement.
 - Edit `AGENTS.md` so the layout and conventions describe your real project.
 - Add checks for your field (units, data formats, numerical methods) to the "Project-specific
   checks" section of `.github/instructions/review.instructions.md`.

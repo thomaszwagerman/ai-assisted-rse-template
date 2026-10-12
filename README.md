@@ -7,10 +7,16 @@ SPDX-License-Identifier: MIT
 # project-name
 
 [![Tests](https://github.com/thomaszwagerman/ai-assisted-rse-template/actions/workflows/tests.yml/badge.svg)](https://github.com/thomaszwagerman/ai-assisted-rse-template/actions/workflows/tests.yml)
+[![Lint](https://github.com/thomaszwagerman/ai-assisted-rse-template/actions/workflows/lint.yml/badge.svg)](https://github.com/thomaszwagerman/ai-assisted-rse-template/actions/workflows/lint.yml)
+[![CodeQL](https://github.com/thomaszwagerman/ai-assisted-rse-template/actions/workflows/codeql.yml/badge.svg)](https://github.com/thomaszwagerman/ai-assisted-rse-template/actions/workflows/codeql.yml)
 [![Docs](https://github.com/thomaszwagerman/ai-assisted-rse-template/actions/workflows/docs.yml/badge.svg)](https://thomaszwagerman.github.io/ai-assisted-rse-template/)
 [![REUSE status](https://api.reuse.software/badge/github.com/thomaszwagerman/ai-assisted-rse-template)](https://api.reuse.software/info/github.com/thomaszwagerman/ai-assisted-rse-template)
 [![OpenSSF Scorecard](https://api.scorecard.dev/projects/github.com/thomaszwagerman/ai-assisted-rse-template/badge)](https://scorecard.dev/viewer/?uri=github.com/thomaszwagerman/ai-assisted-rse-template)
+[![Release](https://github.com/thomaszwagerman/ai-assisted-rse-template/actions/workflows/release.yml/badge.svg)](https://github.com/thomaszwagerman/ai-assisted-rse-template/actions/workflows/release.yml)
+[![PyPI](https://img.shields.io/pypi/v/project-name.svg)](https://pypi.org/project/project-name/)
+[![Python versions](https://img.shields.io/pypi/pyversions/project-name.svg)](https://pypi.org/project/project-name/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSES/MIT.txt)
+[![Project Status: WIP – Initial development is in progress, but there has not yet been a stable, usable release suitable for the public.](https://www.repostatus.org/badges/latest/wip.svg)](https://www.repostatus.org/#wip)
 
 One-line description of the project.
 
@@ -32,6 +38,8 @@ One-line description of the project.
 >   [https://doi.org/10.5281/zenodo.20320179](https://doi.org/10.5281/zenodo.20320179)
 >   ([blog post](https://www.researchsoft.org/blog/2026-05-28/)).
 >
+> **Status:** alpha. The template is usable, but its layout, prompts and agents may
+> change between releases. See the [changelog](CHANGELOG.md).
 <!-- template-about:end -->
 
 > **Using this as a template?** Start with

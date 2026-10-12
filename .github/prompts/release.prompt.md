@@ -17,6 +17,8 @@ If the optional community skills are installed (see `AGENTS.md`), also use
    - `pyproject.toml` (`uv version <new>` does this and refreshes `uv.lock`)
    - `CITATION.cff` (`version`, `date-released` as today's date)
    - `codemeta.json` (`version`)
+   - if the project's maturity changes: the repostatus badge in `README.md` and the
+     `Development Status` classifier in `pyproject.toml` (ask the user)
 4. In `CHANGELOG.md`, move "Unreleased" entries under `## [<new>] - YYYY-MM-DD`, start a
    new empty "Unreleased", and update the compare links.
 5. Run `uv run cffconvert --validate`, `make reuse`, `make build` and `make docs`.
