@@ -1,0 +1,23 @@
+{
+  "@context": "https://w3id.org/codemeta/3.0",
+  "type": "SoftwareSourceCode",
+  "name": "project-name",
+  "description": "One-line description of the project.",
+  "version": "0.1.0",
+  "license": "https://spdx.org/licenses/MIT",
+  "codeRepository": "https://github.com/your-org/project-name",
+  "issueTracker": "https://github.com/your-org/project-name/issues",
+  "programmingLanguage": "Python",
+  "runtimePlatform": "Python >=3.11",
+  "author": [
+    {
+      "type": "Person",
+      "givenName": "Your",
+      "familyName": "Name",
+      "email": "you@example.org"
+    }
+  ],
+  "keywords": ["research software"],
+  "dateCreated": "2026-01-01",
+  "developmentStatus": "wip"
+}

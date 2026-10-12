@@ -1,0 +1,37 @@
+version = 1
+
+# Files that cannot carry an SPDX header (generated, binary, or data formats
+# where comments are not allowed). Everything else carries its own header.
+
+[[annotations]]
+path = [
+  "uv.lock",
+  ".python-version",
+  "codemeta.json",
+  "CITATION.cff",
+  ".github/**",
+  ".vscode/**",
+  "LICENSE",
+  "src/project_name/py.typed",
+]
+precedence = "aggregate"
+SPDX-FileCopyrightText = "2026 Your Name"
+SPDX-License-Identifier = "MIT"
+
+# Documentation and prose: example of using a different licence for non-code.
+# Change to CC-BY-4.0 (and add LICENSES/CC-BY-4.0.txt via `reuse download`)
+# if you want documentation licensed separately from the code.
+[[annotations]]
+path = [
+  "README.md",
+  "CHANGELOG.md",
+  "CONTRIBUTING.md",
+  "CODE_OF_CONDUCT.md",
+  "GOVERNANCE.md",
+  "SECURITY.md",
+  "AGENTS.md",
+  "docs/**",
+]
+precedence = "aggregate"
+SPDX-FileCopyrightText = "2026 Your Name"
+SPDX-License-Identifier = "MIT"

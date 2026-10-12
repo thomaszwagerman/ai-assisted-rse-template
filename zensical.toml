@@ -1,0 +1,31 @@
+# SPDX-FileCopyrightText: 2026 Your Name
+#
+# SPDX-License-Identifier: MIT
+
+[project]
+site_name = "project-name"
+site_description = "One-line description of the project."
+site_author = "Your Name"
+site_url = "https://your-org.github.io/project-name/"
+copyright = "&copy; 2026 Your Name"
+docs_dir = "docs"
+site_dir = "site"
+
+nav = [
+  { "Home" = "index.md" },
+  { "Getting started" = "getting-started.md" },
+  { "API reference" = "api.md" },
+  { "Using this template" = [
+    "using-this-template.md",
+    "ai-workflow.md",
+  ] },
+]
+
+[project.plugins.mkdocstrings.handlers.python]
+paths = ["src"]
+
+[project.plugins.mkdocstrings.handlers.python.options]
+docstring_style = "numpy"
+show_source = false
+show_root_heading = true
+members_order = "source"

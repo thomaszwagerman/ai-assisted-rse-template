@@ -1,0 +1,97 @@
+# SPDX-FileCopyrightText: 2026 Your Name
+#
+# SPDX-License-Identifier: MIT
+
+[project]
+name = "project-name"
+version = "0.1.0"
+description = "One-line description of the project."
+readme = "README.md"
+requires-python = ">=3.11"
+license = "MIT"
+license-files = ["LICENSES/*.txt"]
+authors = [{ name = "Your Name", email = "you@example.org" }]
+keywords = ["research-software"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Science/Research",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Typing :: Typed",
+]
+dependencies = []
+
+[project.urls]
+Homepage = "https://github.com/your-org/project-name"
+Documentation = "https://your-org.github.io/project-name/"
+Repository = "https://github.com/your-org/project-name"
+Issues = "https://github.com/your-org/project-name/issues"
+Changelog = "https://github.com/your-org/project-name/blob/main/CHANGELOG.md"
+
+[build-system]
+requires = ["uv_build>=0.11.4,<0.12.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "cffconvert>=2.0",
+    "mypy>=1.10",
+    "pre-commit>=3.7",
+    "pytest>=8.0",
+    "pytest-cov>=5.0",
+    "reuse>=5.0",
+    "ruff>=0.6",
+    "validate-pyproject>=0.18",
+]
+docs = [
+    "mkdocstrings-python>=1.10",
+    "zensical>=0.0.69",
+]
+
+[tool.uv]
+default-groups = ["dev"]
+
+[tool.ruff]
+line-length = 88
+src = ["src", "tests"]
+
+[tool.ruff.lint]
+select = [
+    "E",   # pycodestyle errors
+    "F",   # pyflakes
+    "W",   # pycodestyle warnings
+    "I",   # isort
+    "B",   # bugbear
+    "UP",  # pyupgrade
+    "SIM", # simplify
+    "NPY", # numpy
+    "D",   # pydocstyle
+    "RUF", # ruff-specific
+]
+
+[tool.ruff.lint.pydocstyle]
+convention = "numpy"
+
+[tool.ruff.lint.per-file-ignores]
+"tests/**" = ["D"]
+"scripts/**" = ["D"]
+
+[tool.mypy]
+python_version = "3.11"
+strict = true
+files = ["src", "tests"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = [
+    "--strict-markers",
+    "--cov=project_name",
+    "--cov-report=term-missing",
+    "--cov-report=xml",
+]
+
+[tool.coverage.run]
+branch = true
+source = ["project_name"]

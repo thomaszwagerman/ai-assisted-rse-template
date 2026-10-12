@@ -1,0 +1,64 @@
+# SPDX-FileCopyrightText: 2026 Your Name
+#
+# SPDX-License-Identifier: MIT
+
+# Install the hooks once with `make install`. Run manually with
+# `uv run pre-commit run --all-files`. Keep revs current with `pre-commit autoupdate`.
+default_install_hook_types: [pre-commit, commit-msg]
+
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v6.0.0
+    hooks:
+      - id: check-added-large-files
+        args: [--maxkb=500]
+      - id: check-merge-conflict
+      - id: check-toml
+      - id: check-yaml
+      - id: check-json
+      - id: detect-private-key
+      - id: end-of-file-fixer
+      - id: trailing-whitespace
+
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.17.0
+    hooks:
+      - id: ruff-check
+        args: [--fix]
+      - id: ruff-format
+
+  - repo: https://github.com/abravalheri/validate-pyproject
+    rev: v0.25
+    hooks:
+      - id: validate-pyproject
+
+  - repo: https://github.com/fsfe/reuse-tool
+    rev: v6.2.0
+    hooks:
+      - id: reuse
+
+  - repo: local
+    hooks:
+      - id: mypy
+        name: mypy
+        entry: uv run mypy
+        language: system
+        types: [python]
+        pass_filenames: false
+      - id: uv-lock
+        name: uv.lock is up to date
+        entry: uv lock --check
+        language: system
+        files: ^(pyproject\.toml|uv\.lock)$
+        pass_filenames: false
+      - id: cffconvert
+        name: validate CITATION.cff
+        entry: uv run cffconvert --validate
+        language: system
+        files: ^CITATION\.cff$
+        pass_filenames: false
+      - id: conventional-commit
+        name: conventional commit message
+        entry: python3 scripts/check_commit_msg.py
+        language: system
+        stages: [commit-msg]

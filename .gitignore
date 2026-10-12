@@ -1,0 +1,37 @@
+# SPDX-FileCopyrightText: 2026 Your Name
+#
+# SPDX-License-Identifier: MIT
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+build/
+dist/
+
+# Tooling caches
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+.coverage.*
+coverage.xml
+htmlcov/
+
+# Docs
+site/
+.cache/
+
+# Editors / OS
+.DS_Store
+.idea/
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
+!.vscode/tasks.json
+
+# Secrets and local config
+.env
+.env.*
+!.env.example
