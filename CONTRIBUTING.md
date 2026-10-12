@@ -54,8 +54,7 @@ unpublished or sensitive data into an assistant. Agent configuration lives in
 
 ## Releasing (maintainers)
 
-See `.github/skills/release-checklist/SKILL.md`, or ask your AI assistant to follow the
-`release-checklist` skill.
+Run the `/release` prompt (`.github/prompts/release.prompt.md`) in your AI assistant.
 
 ## Code of conduct
 

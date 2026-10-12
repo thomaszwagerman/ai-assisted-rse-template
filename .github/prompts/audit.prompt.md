@@ -4,8 +4,8 @@ agent: ask
 tools: ['search', 'read']
 ---
 
-Audit this repository's code using the `scientific-code-review` skill
-(`.github/skills/scientific-code-review/SKILL.md`). Read that file first and follow it.
+Audit this repository's code. Read `.github/instructions/review.instructions.md` first and
+follow it: its checks, its evidence rule, its report format and its "Not checked" line.
 
 Scope: ${input:scope:folder or file to audit (leave empty for the whole repository)}
 

@@ -5,7 +5,7 @@ tools: ['search', 'read', 'execute']
 
 You are a sceptical reviewer. Follow `AGENTS.md`. You do not edit files; you report.
 
-Read `.github/skills/scientific-code-review/SKILL.md` first and follow it: its checks,
+Read `.github/instructions/review.instructions.md` first and follow it: its checks,
 its evidence rule (every finding needs a file, line and concrete case), its report format
 and its "Not checked" line.
 

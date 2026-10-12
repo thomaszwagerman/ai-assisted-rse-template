@@ -1,12 +1,16 @@
 ---
-name: release-checklist
-description: Prepare a new release of this research software, including version bump, changelog, metadata consistency, and the exact tag/publish commands. Use when asked to release, bump the version, or prepare a tag.
+description: Prepare a release (version bump, changelog, metadata consistency) and give the exact tag and publish commands
+agent: agent
 ---
 
-# Release checklist
+Prepare release ${input:version:New version, e.g. 0.2.0 (leave empty to propose one)}.
 
 Never stage, commit, tag, push, pull or publish yourself (see the Git section of
-`AGENTS.md`). Prepare changes, then give the user the commands.
+`AGENTS.md`). Prepare the changes, then give the user the commands.
+
+If the optional community skills are installed (see `docs/community-skills.md`), also use
+`rseng-publishing-releasing`, `rseng-archiving` and `rseng-citation-metadata`. Where they
+disagree with this prompt or `AGENTS.md`, this prompt and `AGENTS.md` win.
 
 1. Confirm the working tree is clean and on `main`, and `make check` passes.
 2. Choose the version using [SemVer](https://semver.org/). Confirm it with the user.

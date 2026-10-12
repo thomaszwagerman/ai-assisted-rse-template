@@ -44,7 +44,8 @@ make docs      # build the documentation
 make help      # list all targets
 ```
 
-See [CONTRIBUTING.md](CONTRIBUTING.md) for the full workflow.
+See [CONTRIBUTING.md](CONTRIBUTING.md) for the full workflow. For optional AI-assistant
+skills, see [docs/community-skills.md](docs/community-skills.md).
 
 ## Citation
 

@@ -40,7 +40,8 @@ Then, by hand:
 - Update `GOVERNANCE.md` and the contact address in `CODE_OF_CONDUCT.md`.
 - Edit `AGENTS.md` so the layout and conventions describe your real project.
 - Add checks for your field (units, data formats, numerical methods) to the "Project-specific
-  checks" section of `.github/skills/scientific-code-review/SKILL.md`.
+  checks" section of `.github/instructions/review.instructions.md`.
+- Optionally install the community skills; see [community-skills.md](community-skills.md).
 
 Then verify everything:
 
@@ -64,8 +65,7 @@ make docs
 
 ## 4. Releasing
 
-Follow `.github/skills/release-checklist/SKILL.md`, or ask Copilot Chat to follow the
-`release-checklist` skill. Publishing a GitHub release triggers Zenodo,
+Run the `/release` prompt in Copilot Chat (`.github/prompts/release.prompt.md`). Publishing a GitHub release triggers Zenodo,
 which reads `CITATION.cff`. Add the DOI back into `CITATION.cff`, `codemeta.json` and the
 README afterwards.
 

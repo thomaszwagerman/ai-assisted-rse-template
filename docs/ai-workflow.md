@@ -17,9 +17,10 @@ responsible for correctness, licensing and the scientific claims.
 | `AGENTS.md` | Single source of truth for commands, conventions, integrity rules, and what to ask first. Read by Copilot and other agents (Claude Code, Codex, Cursor, ...). |
 | `.github/copilot-instructions.md` | Short Copilot-specific pointer to `AGENTS.md`. |
 | `.github/instructions/*.instructions.md` | Rules that apply only to matching files (`applyTo`). |
-| `.github/prompts/*.prompt.md` | Reusable workflows. Type `/` in Copilot Chat to run them. |
+| `.github/prompts/*.prompt.md` | Reusable workflows. Type `/` in Copilot Chat to run them: `/audit`, `/fair-review`, `/release`, `/write-tests`, `/explain-code`. |
 | `.github/agents/*.agent.md` | Personas with restricted tools: `planner` (read-only), `implementer`, `reviewer` (reports, does not edit), `docs-writer`. |
-| `.github/skills/*/SKILL.md` | Task playbooks an agent loads when relevant: `scientific-code-review`, `fair-review`, `release-checklist`. |
+| `.github/instructions/review.instructions.md` | How `/audit` and the `reviewer` agent review code and report findings. Add checks for your field in its "Project-specific checks" section. |
+| [Community skills](community-skills.md) | Optional. The template ships no skills of its own; it points to the community [rseng-agent-skills](https://github.com/fdiblen/rseng-agent-skills) pack for practice guidance. |
 
 ## A loop that works
 
@@ -34,7 +35,7 @@ responsible for correctness, licensing and the scientific claims.
    randomness, weakened tolerances, unclear units, missing docs, new dependencies.
    Use `/audit` for a read-only look at a whole folder or the repository, and
    `/fair-review` for metadata and sustainability. `/audit` and the `reviewer` follow
-   `.github/skills/scientific-code-review/SKILL.md`; add checks for your field in its
+   `.github/instructions/review.instructions.md`; add checks for your field in its
    "Project-specific checks" section. An automated review does not replace tests,
    numerical validation or a domain expert.
 5. **Commit** in small Conventional Commits. You wrote it, you own it.

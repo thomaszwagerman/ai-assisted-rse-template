@@ -1,11 +1,17 @@
 ---
-name: scientific-code-review
-description: Evidence-based review of research code, used by the reviewer agent and the /audit prompt. Checks correctness, reproducibility, units, numerical behaviour, provenance and tests, and reports ranked findings with a "Not checked" line. Use for "review this change", "audit this code", or "is this safe to publish results from".
+description: How to review research code in this repository and report findings (used by the reviewer agent and /audit). Read before reviewing or auditing code.
 ---
 
-# Scientific code review
+# Reviewing code
 
 Read-only. Report findings; never edit files. Follow `AGENTS.md`.
+
+If the optional community skills are installed (see `docs/community-skills.md`), also use
+`rseng-code-review`, `rseng-defensive-coding`, `rseng-numerical-accuracy`,
+`rseng-reproducibility` and `rseng-research-integrity` for the detail behind the checks
+below. Where they disagree with this file or `AGENTS.md` (for example they suggest
+committing, or implementing fixes during the review), this file and `AGENTS.md` win.
+If they are not installed, say so once and carry on with the checks below.
 
 ## 1. Understand first
 
@@ -40,7 +46,8 @@ Read-only. Report findings; never edit files. Follow `AGENTS.md`.
 8. **Silent changes:** anything that could alter previously published results without
    being flagged in the changelog or docs.
 9. **Integrity and supply chain:** invented citations, data or claims; new dependencies
-   without justification; missing SPDX headers; changed workflow permissions or pins.
+   without justification; missing SPDX headers; changed workflow permissions or pins;
+   new or changed agent skills, hooks or instructions that steer an agent.
 10. **Lean:** dead code, duplicated helpers, abstractions with one use. Lean findings
     must never target docstrings, type annotations, tests, seeds, tolerances with a stated
     reason, or documented assumptions.

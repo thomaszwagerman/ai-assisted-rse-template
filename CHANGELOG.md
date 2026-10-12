@@ -15,21 +15,24 @@ All notable changes are documented here. The format follows
 ### Added
 
 - Initial project structure.
-- `/audit` prompt and `scientific-code-review` skill; reviewer agent now requires evidence
-  for each finding.
-- `implementer` agent and `fair-review` skill with a read-only `/fair-review` prompt
-  (replaces `/review-for-fair`).
+- `/audit` prompt and `.github/instructions/review.instructions.md`; reviewer agent now
+  requires evidence for each finding.
+- `implementer` agent and a read-only `/fair-review` prompt (replaces `/review-for-fair`).
+- `/release` prompt, and an optional-install guide for the community
+  [rseng-agent-skills](https://github.com/fdiblen/rseng-agent-skills)
+  (`docs/community-skills.md`).
 - Python 3.14 support (classifier and CI matrix).
 - Smoke test for `scripts/init_template.py`.
 
 ### Changed
 
-- Agents and prompts now point to `AGENTS.md` and the skills instead of restating them;
-  `update-docs` is folded into the `docs-writer` agent.
+- Agents and prompts now point to `AGENTS.md` and the review instructions instead of
+  restating them; `update-docs` is folded into the `docs-writer` agent.
+- The template no longer ships its own skills; it points to the community pack instead.
 
 ### Removed
 
 - `/new-feature` (superseded by the `implementer` agent) and `/prepare-release`
-  (use the `release-checklist` skill) prompts.
+  (use `/release`) prompts.
 
 [Unreleased]: https://github.com/your-org/project-name/compare/HEAD...HEAD
