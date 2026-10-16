@@ -24,7 +24,7 @@ One-line description of the project.
 > This is an *opinionated* repository template for research
 > software engineers (RSEs) who want their work to be assisted by AI tools and agents.
 > It attempts to pair RSE good practice with agent instructions, prompts and
-> guard-rails.
+> guard-rails. It has all the bells and whistles, many of which may be overkill for your project.
 >
 > Recommended complimentary resources:
 >
