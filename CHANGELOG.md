@@ -15,6 +15,7 @@ All notable changes are documented here. The format follows
 ### Added
 
 - Initial project structure.
+- `SECURITY.md` with a private vulnerability reporting policy.
 - `/audit` prompt and `.github/instructions/review.instructions.md`; reviewer agent now
   requires evidence for each finding.
 - `implementer` agent and a read-only `/fair-review` prompt (replaces `/review-for-fair`).

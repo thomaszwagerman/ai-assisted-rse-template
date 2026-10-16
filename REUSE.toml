@@ -21,6 +21,7 @@ path = [
   "CONTRIBUTING.md",
   "CODE_OF_CONDUCT.md",
   "GOVERNANCE.md",
+  "SECURITY.md",
   "AGENTS.md",
   "docs/**",
 ]

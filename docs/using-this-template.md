@@ -37,7 +37,9 @@ Then, by hand:
 - Check the licence choice (MIT by default). To change it: replace `LICENSES/MIT.txt` and
   `LICENSE` (`uv run reuse download <SPDX-ID>`), update `license` in `pyproject.toml`,
   `CITATION.cff`, `codemeta.json`, `REUSE.toml` and the SPDX headers.
-- Update `GOVERNANCE.md` and the contact address in `CODE_OF_CONDUCT.md`.
+- Update `GOVERNANCE.md` and the contact address in `CODE_OF_CONDUCT.md` and
+  `SECURITY.md`. Enable private vulnerability reporting (Settings, Advanced Security) so
+  the link in `SECURITY.md` works.
 - Keep the [repostatus.org](https://www.repostatus.org) badge in `README.md` (WIP by
   default) and the `Development Status` classifier in `pyproject.toml` in agreement.
 - Edit `AGENTS.md` so the layout and conventions describe your real project.
