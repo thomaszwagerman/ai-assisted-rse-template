@@ -30,7 +30,8 @@ Run `make help` to see every target.
 3. Make small, focused commits using
    [Conventional Commits](https://www.conventionalcommits.org/) messages.
 4. Add or update tests and documentation with the code.
-5. Run `make check`. Pre-commit hooks run automatically on commit.
+5. Run `make check`. Pre-commit hooks run automatically on commit. If you changed
+   dependencies or `uv.lock`, also run `make audit` (needs the network).
 6. Open a pull request and fill in the template.
 
 ## Standards
