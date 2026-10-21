@@ -62,6 +62,8 @@ make docs
 | Pages source = **GitHub Actions** | Settings, Pages | `docs.yml` deploys the site |
 | Branch protection on `main` | Settings, Rules | Require pull request and the `Tests`, `Lint`, `REUSE compliance` and `CodeQL` checks |
 | Dependabot alerts and security updates | Settings, Advanced Security | Alerts for vulnerable dependencies |
+| Code owner | `.github/CODEOWNERS` | Replace the handle so you are asked to review Dependabot and all other PRs |
+| Notifications | GitHub profile, Settings, Notifications | Watch the repository with Pull requests and Security alerts; enable "failed workflows only" for Actions |
 | Secret scanning and push protection | Settings, Advanced Security | Stops leaked credentials |
 | Environment `pypi` | Settings, Environments | Add yourself as a required reviewer for releases |
 | PyPI trusted publisher | pypi.org, project, Publishing | Workflow `release.yml`, environment `pypi`; no token needed |
