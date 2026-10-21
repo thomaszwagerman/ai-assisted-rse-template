@@ -15,6 +15,8 @@ All notable changes are documented here. The format follows
 ### Added
 
 - Initial project structure.
+- `.github/CODEOWNERS` so the maintainer is requested to review every PR, including
+  Dependabot's.
 - `SECURITY.md` with a private vulnerability reporting policy.
 - `/audit` prompt and `.github/instructions/review.instructions.md`; reviewer agent now
   requires evidence for each finding.
