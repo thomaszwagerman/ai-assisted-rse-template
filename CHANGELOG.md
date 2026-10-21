@@ -15,6 +15,7 @@ All notable changes are documented here. The format follows
 ### Added
 
 - Initial project structure.
+- `make audit` (`uv audit`) to check locked dependencies for known vulnerabilities.
 - `.github/CODEOWNERS` so the maintainer is requested to review every PR, including
   Dependabot's.
 - `SECURITY.md` with a private vulnerability reporting policy.

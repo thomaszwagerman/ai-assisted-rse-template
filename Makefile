@@ -4,7 +4,7 @@
 
 .DEFAULT_GOAL := help
 
-.PHONY: help install test lint format typecheck reuse metadata docs docs-serve build check clean
+.PHONY: help install test lint format typecheck reuse metadata audit docs docs-serve build check clean
 
 help: ## Show this help
 	@grep -E '^[a-zA-Z_-]+:.*?## ' $(MAKEFILE_LIST) | \
@@ -34,6 +34,10 @@ reuse: ## Check REUSE / SPDX licence compliance
 metadata: ## Validate pyproject.toml and CITATION.cff
 	uv run validate-pyproject pyproject.toml
 	uv run cffconvert --validate
+
+# Needs the network and is experimental in uv; deliberately not part of `check`.
+audit: ## Check locked dependencies for known vulnerabilities
+	uv audit --preview-features audit-command
 
 docs: ## Build the documentation site into ./site
 	uv run --group docs zensical build --clean
