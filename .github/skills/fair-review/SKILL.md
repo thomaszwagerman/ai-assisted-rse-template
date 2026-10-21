@@ -1,9 +1,8 @@
 ---
+name: fair-review
 description: Read-only review of FAIR4RS and software-sustainability metadata and practice
-agent: ask
-tools: ['search', 'read']
+disable-model-invocation: true
 ---
-
 Review this repository's metadata and sustainability against FAIR4RS and Software
 Sustainability Institute practice. This prompt changes nothing: report findings, never
 edit files. Follow `AGENTS.md`. Do not invent facts; mark anything you cannot verify from

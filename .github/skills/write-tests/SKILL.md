@@ -1,8 +1,8 @@
 ---
+name: write-tests
 description: Write or improve tests for the selected code or file
-agent: agent
+disable-model-invocation: true
 ---
-
 Write tests for ${input:target:File, function or selection to test}.
 
 - Follow `.github/instructions/tests.instructions.md`. If the optional community skills

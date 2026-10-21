@@ -1,8 +1,8 @@
 ---
+name: explain-code
 description: Explain code step by step for learning or onboarding
-agent: ask
+disable-model-invocation: true
 ---
-
 Explain ${input:target:File, function or selection} to me.
 
 - Start with a two-sentence summary of its purpose.

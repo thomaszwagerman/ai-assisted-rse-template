@@ -1,8 +1,8 @@
 ---
-description: Prepare a release (version bump, changelog, metadata consistency) and give the exact tag and publish commands
-agent: agent
+name: release
+description: "Prepare a release (version bump, changelog, metadata consistency) and give the exact tag and publish commands"
+disable-model-invocation: true
 ---
-
 Prepare release ${input:version:New version, e.g. 0.2.0 (leave empty to propose one)}.
 
 Never stage, commit, tag, push, pull or publish yourself (see the Git section of

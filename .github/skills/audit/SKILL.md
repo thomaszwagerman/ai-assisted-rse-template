@@ -1,9 +1,8 @@
 ---
-description: Read-only audit of the code for correctness, reproducibility, units, tests and silent risks
-agent: ask
-tools: ['search', 'read']
+name: audit
+description: "Read-only audit of the code for correctness, reproducibility, units, tests and silent risks"
+disable-model-invocation: true
 ---
-
 Audit this repository's code. Read `.github/instructions/review.instructions.md` first and
 follow it: its checks, its evidence rule, its report format and its "Not checked" line.
 
