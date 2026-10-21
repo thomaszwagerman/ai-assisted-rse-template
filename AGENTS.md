@@ -28,6 +28,7 @@ Use `make` targets (they wrap `uv run`). Never call `pip` directly.
 | Lint / format | `make lint` / `make format` |
 | Type check (mypy strict) | `make typecheck` |
 | Licence compliance (REUSE) | `make reuse` |
+| Known-vulnerability check (network, not in `make check`) | `make audit` |
 | Build / preview docs (Zensical) | `make docs` / `make docs-serve` |
 | Add a dependency | `uv add <pkg>` (runtime) or `uv add --group dev <pkg>` |
 

@@ -5,6 +5,7 @@
 ## Checklist
 
 - [ ] `make check` passes locally
+- [ ] `make audit` reports no known vulnerabilities (if dependencies or `uv.lock` changed)
 - [ ] Tests added or updated
 - [ ] Docs and docstrings updated
 - [ ] `CHANGELOG.md` updated under "Unreleased"
